@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Informācijas daudzuma mērvienības</title>
+
+<style>
+body {
+background-image: url("cipari.jpg");
+font-size: 21px;
+}
+form {
+background-color: rgb(220,220,0)
+}
+</style>
+</head>
+
+<body>
+<h1> Informācijas daudzuma mērvienības </h1>
+
+
+<form action="/action_page.php">
+  <input type="text" name="gb">
+  <label for="gb">GB</label><br><br>
+    <input type="button" name="poga" value="Izteikt megabaitos">
+
+  <input type="text" name="mb">
+    <label for="mb">MB</label><br><br>
+	  <input type="button" name="poga1" value="Izteikt mibibaitos">
+
+  <input type="text" name="mib">
+    <label for="mib">MiB</label><br><br>
+<br>
+
+	<script>
+	function
+	</script>
+</form> 
+
+
+
+
+
+</body>
+</html>
