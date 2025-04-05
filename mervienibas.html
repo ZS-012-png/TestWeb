@@ -35,8 +35,18 @@ background-color: rgb(220,220,0)
 
 	<script>
 	function mb(){
+    var gb = document.getElementById("gb").value;
+    
+    var mb = gb * 1024;
+    
+    document.getElementById("mb").value = mb;
 	}
 	function mib(){
+    var gb = document.getElementById("gb").value;
+    
+    var mib = gb * 953.674316;  
+    
+    document.getElementById("mib").value = mib;
 	}
 	</script>
 </form> 
