@@ -26,9 +26,29 @@ Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena<br><br>
   dienas : )) 
 
 	<script>
-	function dienas(){
-	
-	}
+	function dienas() {
+  const gads = parseInt(document.getElementById("gads").value);
+  const menesis = parseInt(document.getElementById("menesis").value);
+  const diena = parseInt(document.getElementById("diena").value);
+
+  if (isNaN(gads) || isNaN(menesis) || isNaN(diena)) {
+    alert("Lūdzu, ievadi visus trīs datumus kā skaitļus.");
+    return;
+  }
+
+  const sodiena = new Date();
+  const ievaditaisDatums = new Date(gads, menesis - 1, diena); // mēnesis - 1, jo JS mēneši sākas no 0
+
+  const atskiribaLaika = ievaditaisDatums - sodiena;
+
+  if (atskiribaLaika < 0) {
+    alert("Ievadītais datums jau ir pagājis. Lūdzu, ievadi nākotnes datumu.");
+    return;
+  }
+
+  const dienasLidz = Math.ceil(atskiribaLaika / (1000 * 60 * 60 * 24));
+  document.getElementById("dienas").value = dienasLidz;
+}
 	</script>
 </form> 
 
